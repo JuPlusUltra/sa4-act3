@@ -3,7 +3,7 @@ print("I'm thinking of a number...")
 guess = 0
 
 while guess != number:
-    guess = (input("What number am I thinking of? "))
+    guess = input("What number am I thinking of? ")
 
     if guess == 'q':
         break
@@ -13,8 +13,10 @@ while guess != number:
         break
 
     else:
-        print(f"Sorry! Try again.")
-        
+        if int(guess) > number:
+            print('Nope! Guess is TOO HIGH')
+        elif int(guess) < number:
+            print('Nope! Guess is TOO LOW')
 
     
     
